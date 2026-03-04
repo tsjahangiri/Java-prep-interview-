@@ -127,13 +127,12 @@ ZSCORE game:leaderboard {userId}            # O(1) user's score
 - **Hot key problem**: popular keys (e.g., homepage data) → replicate across multiple nodes; add jitter to TTLs
 - **Cache stampede**: many requests miss simultaneously → mutex/coalescing, probabilistic early expiration, or background refresh
 
-### Cache Stampede Prevention (Java)
-```java
+### Cache Stampede Prevention (pseudocode)
+```
 // Probabilistic early expiration: occasionally refresh before actual expiry
-double beta = 1.0;
-double delta = recomputeTime; // how long recompute takes
-double rand = -1.0 * Math.log(Math.random());
-if (now - ttl + beta * delta * rand >= expiry) {
-    // recompute now, before expiry
-}
+beta = 1.0
+delta = time to recompute the cached value
+rand = -1.0 * log(random())
+if (currentTime - ttl + beta * delta * rand >= expiryTime):
+    // recompute now, before actual expiry, to avoid a stampede at expiry
 ```

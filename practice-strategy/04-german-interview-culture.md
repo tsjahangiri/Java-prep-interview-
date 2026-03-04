@@ -77,7 +77,7 @@ This is not seen as lacking dedication — it's seen as being realistic.
 - Research via Levels.fyi, Glassdoor, LinkedIn Salary for the specific company
 - Mention your current/competing offers if you have them
 - Ask about the full package: base, bonus, equity, Urlaubstage (vacation days), Weiterbildung (training budget)
-- 30 vacation days minimum is legally required; many companies offer 28–30 days
+- Statutory minimum vacation is 20 days for a 5-day week (24 for a 6-day week); many tech companies *typically* offer around 28–30 days
 
 ---
 

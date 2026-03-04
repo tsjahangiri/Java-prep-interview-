@@ -146,7 +146,7 @@ When discussing solutions:
 
 ## 🛠 Running the Code Examples
 
-Requirements: Java 17+, Maven or your IDE of choice.
+Requirements: Java 17+ and your IDE of choice.
 
 ```bash
 # Compile a single file

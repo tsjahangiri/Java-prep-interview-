@@ -84,6 +84,12 @@ public class SortingAlgorithms {
 
     public static void countingSort(int[] arr, int maxValue) {
         if (arr == null || arr.length <= 1) return;
+        for (int val : arr) {
+            if (val < 0 || val > maxValue) {
+                throw new IllegalArgumentException(
+                    "Value " + val + " is out of range [0, " + maxValue + "]");
+            }
+        }
         int[] count = new int[maxValue + 1];
         for (int val : arr) count[val]++;
         int idx = 0;

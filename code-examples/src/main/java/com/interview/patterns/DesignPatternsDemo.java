@@ -1,7 +1,6 @@
 package com.interview.patterns;
 
 import java.util.*;
-import java.util.function.Function;
 
 /**
  * Demonstrates key design patterns frequently asked in senior Java interviews.

@@ -106,10 +106,10 @@ public class CustomThreadPoolDemo {
             60, TimeUnit.SECONDS,                // idle threads kept alive
             new ArrayBlockingQueue<>(10),        // bounded work queue
             new ThreadFactory() {
-                private int count = 0;
+                private final AtomicInteger count = new AtomicInteger(0);
                 @Override
                 public Thread newThread(Runnable r) {
-                    Thread t = new Thread(r, "worker-" + count++);
+                    Thread t = new Thread(r, "worker-" + count.getAndIncrement());
                     t.setDaemon(true);
                     return t;
                 }
